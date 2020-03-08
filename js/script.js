@@ -10,7 +10,7 @@ if (computerChoice == 1) {
 } else if (computerChoice == 2) {
   computerMove = 'Papier';
 } else {
-  computerMove = 'Nozyce'
+  computerMove = 'Nozyce';
 }
 
 printMessage('Ruch komputera to: ' + computerMove);
@@ -26,8 +26,10 @@ if (playerInput == 1) {
   playerMove = 'Kamien';
 } else if (playerInput == 2) {
   playerMove = 'Papier';
-} else {
+} else if (playerInput == 3) {
   playerMove ='Nozyce';
+} else {
+  playerMove = playerMove;
 }
 
-printMessage('Ruch gracza to: ' + computerMove);
+printMessage('Ruch gracza to: ' + playerMove);
