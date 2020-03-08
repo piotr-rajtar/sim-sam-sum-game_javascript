@@ -18,72 +18,75 @@ let computerMove = getMoveName(computerChoice);
 
 console.log('Komputer wybral: ' + computerChoice);
 
-printMessage('Ruch komputera to: ' + computerMove);
-
 //PLAYER MOVE
 let playerInput = prompt('Wybierz swoj ruch: 1.Kamien, 2.Papier, 3.Nozyce');
 let playerMove = getMoveName(playerInput);
 
 console.log('Gracz wybral: ' + playerInput);
 
-printMessage('Ruch gracza to: ' + playerMove);
+// RESULTS - FUNCTION
 
-// RESULTS - SUMMARY
+function displayResult(argComputerMove, argPlayerMove){
+  printMessage('Ruch komputera to: ' + argComputerMove + ', ruch gracza to: ' + argPlayerMove);
 
-//RESULTS - DRAWS
-if (computerMove == 'Kamien' && playerMove == 'Kamien') {
-  printMessage('Mamy remis!');
-}
-if (computerMove == 'Papier' && playerMove == 'Papier') {
-  printMessage('Mamy remis!');
-}
-if (computerMove == 'Nozyce' && playerMove == 'Nozyce') {
-  printMessage('Mamy remis!');
-}
-if (computerMove == 'Nieznany ruch' && playerMove == 'Nieznany ruch') {
-  printMessage('Mamy remis!');
+  //DRAWS
+  if (argComputerMove == 'Kamien' && argPlayerMove == 'Kamien') {
+    return 'Mamy remis!';
+  }
+  if (argComputerMove == 'Papier' && argPlayerMove == 'Papier') {
+    return 'Mamy remis!';
+  }
+  if (argComputerMove == 'Nozyce' && argPlayerMove == 'Nozyce') {
+    return 'Mamy remis!';
+  }
+  if (argComputerMove == 'Nieznany ruch' && argPlayerMove == 'Nieznany ruch') {
+    return 'Mamy remis!';
+  }
+
+  //COMPUTER WINS
+  if (argComputerMove == 'Kamien' && argPlayerMove == 'Nozyce') {
+    return 'Komputer wygrywa!';
+  }
+  if (argComputerMove == 'Papier' && argPlayerMove == 'Kamien') {
+    return 'Komputer wygrywa!';
+  }
+  if (argComputerMove == 'Nozyce' && argPlayerMove == 'Papier') {
+    return 'Komputer wygrywa!';
+  }
+
+  //PLAYER WINS
+  if (argComputerMove == 'Kamien' && argPlayerMove == 'Papier') {
+    return 'Gracz wygrywa!';
+  }
+  if (argComputerMove == 'Papier' && argPlayerMove == 'Nozyce') {
+    return 'Gracz wygrywa!';
+  }
+  if (argComputerMove == 'Nozyce' && argPlayerMove == 'Kamien') {
+    return 'Gracz wygrywa!';
+  }
+
+  //UNKNOWN PLAYER MOVE
+  if (argComputerMove == 'Kamien' && argPlayerMove == 'Nieznany ruch') {
+    return 'Nieznany ruch gracza, komputer wygrywa walkowerem!';
+  }
+  if (argComputerMove == 'Papier' && argPlayerMove == 'Nieznany ruch') {
+    return 'Nieznany ruch gracza, komputer wygrywa walkowerem!';
+  }
+  if (argComputerMove == 'Nozyce' && argPlayerMove == 'Nieznany ruch') {
+    return 'Nieznany ruch gracza, komputer wygrywa walkowerem!';
+  }
+
+  //UNKNOWN COMPUTER MOVE
+  if (argComputerMove == 'Nieznany ruch' && argPlayerMove == 'Kamien') {
+    return 'Nieznany ruch komputera, gracz wygrywa walkowerem!';
+  }
+  if (argComputerMove == 'Nieznany ruch' && argPlayerMove == 'Papier') {
+    return 'Nieznany ruch komputera, gracz wygrywa walkowerem!';
+  }
+  if (argComputerMove == 'Nieznany ruch' && argPlayerMove == 'Nozyce') {
+    return 'Nieznany ruch komputera, gracz wygrywa walkowerem!';
+  }
 }
 
-//RESULTS - COMPUTER WINS
-if (computerMove == 'Kamien' && playerMove == 'Nozyce') {
-  printMessage('Komputer wygrywa!');
-}
-if (computerMove == 'Papier' && playerMove == 'Kamien') {
-  printMessage('Komputer wygrywa!');
-}
-if (computerMove == 'Nozyce' && playerMove == 'Papier') {
-  printMessage('Komputer wygrywa!');
-}
-
-//RESULTS - PLAYER WINS
-if (computerMove == 'Kamien' && playerMove == 'Papier') {
-  printMessage('Gracz wygrywa!');
-}
-if (computerMove == 'Papier' && playerMove == 'Nozyce') {
-  printMessage('Gracz wygrywa!');
-}
-if (computerMove == 'Nozyce' && playerMove == 'Kamien') {
-  printMessage('Gracz wygrywa!');
-}
-
-//RESULTS - UNKNOWN PLAYER MOVE
-if (computerMove == 'Kamien' && playerMove == 'Nieznany ruch') {
-  printMessage('Nieznany ruch gracza, komputer wygrywa walkowerem!');
-}
-if (computerMove == 'Papier' && playerMove == 'Nieznany ruch') {
-  printMessage('Nieznany ruch gracza, komputer wygrywa walkowerem!');
-}
-if (computerMove == 'Nozyce' && playerMove == 'Nieznany ruch') {
-  printMessage('Nieznany ruch gracza, komputer wygrywa walkowerem!');
-}
-
-//RESULTS - UNKNOWN COMPUTER MOVE
-if (computerMove == 'Nieznany ruch' && playerMove == 'Kamien') {
-  printMessage('Nieznany ruch gracza, komputer wygrywa walkowerem!');
-}
-if (computerMove == 'Nieznany ruch' && playerMove == 'Papier') {
-  printMessage('Nieznany ruch gracza, komputer wygrywa walkowerem!');
-}
-if (computerMove == 'Nieznany ruch' && playerMove == 'Nozyce') {
-  printMessage('Nieznany ruch gracza, komputer wygrywa walkowerem!');
-}
+//DISPLAY RESULTS
+printMessage('WYNIK: ' + displayResult(getMoveName(computerChoice),getMoveName(playerInput)));
