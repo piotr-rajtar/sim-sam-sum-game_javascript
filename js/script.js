@@ -37,59 +37,59 @@ printMessage('Ruch gracza to: ' + playerMove);
 // RESULTS - SUMMARY
 
 //RESULTS - DRAWS
-if (computerMove == 'Kamien') && (playerMove = 'Kamien') {
+if (computerMove == 'Kamien' && playerMove == 'Kamien') {
   printMessage('Mamy remis!');
 }
-if (computerMove == 'Papier') && (playerMove = 'Papier') {
+if (computerMove == 'Papier' && playerMove == 'Papier') {
   printMessage('Mamy remis!');
 }
-if (computerMove == 'Nozyce') && (playerMove = 'Nozyce') {
+if (computerMove == 'Nozyce' && playerMove == 'Nozyce') {
   printMessage('Mamy remis!');
 }
-if (computerMove == 'Nieznany ruch') && (playerMove = 'Nieznany ruch') {
+if (computerMove == 'Nieznany ruch' && playerMove == 'Nieznany ruch') {
   printMessage('Mamy remis!');
 }
 
 //RESULTS - COMPUTER WINS
-if (computerMove == 'Kamien') && (playerMove = 'Nozyce') {
+if (computerMove == 'Kamien' && playerMove == 'Nozyce') {
   printMessage('Komputer wygrywa!');
 }
-if (computerMove == 'Papier') && (playerMove = 'Kamien') {
+if (computerMove == 'Papier' && playerMove == 'Kamien') {
   printMessage('Komputer wygrywa!');
 }
-if (computerMove == 'Nozyce') && (playerMove = 'Papier') {
+if (computerMove == 'Nozyce' && playerMove == 'Papier') {
   printMessage('Komputer wygrywa!');
 }
 
 //RESULTS - PLAYER WINS
-if (computerMove == 'Kamien') && (playerMove = 'Papier') {
+if (computerMove == 'Kamien' && playerMove == 'Papier') {
   printMessage('Gracz wygrywa!');
 }
-if (computerMove == 'Papier') && (playerMove = 'Nozyce') {
+if (computerMove == 'Papier' && playerMove == 'Nozyce') {
   printMessage('Gracz wygrywa!');
 }
-if (computerMove == 'Nozyce') && (playerMove = 'Kamien') {
+if (computerMove == 'Nozyce' && playerMove == 'Kamien') {
   printMessage('Gracz wygrywa!');
 }
 
 //RESULTS - UNKNOWN PLAYER MOVE
-if (computerMove == 'Kamien') && (playerMove = 'Nieznany ruch') {
+if (computerMove == 'Kamien' && playerMove == 'Nieznany ruch') {
   printMessage('Nieznany ruch gracza, komputer wygrywa walkowerem!');
 }
-if (computerMove == 'Papier') && (playerMove = 'Nieznany ruch') {
+if (computerMove == 'Papier' && playerMove == 'Nieznany ruch') {
   printMessage('Nieznany ruch gracza, komputer wygrywa walkowerem!');
 }
-if (computerMove == 'Nozyce') && (playerMove = 'Nieznany ruch') {
+if (computerMove == 'Nozyce' && playerMove == 'Nieznany ruch') {
   printMessage('Nieznany ruch gracza, komputer wygrywa walkowerem!');
 }
 
 //RESULTS - UNKNOWN COMPUTER MOVE
-if (computerMove == 'Nieznany ruch') && (playerMove = 'Kamien') {
+if (computerMove == 'Nieznany ruch' && playerMove == 'Kamien') {
   printMessage('Nieznany ruch gracza, komputer wygrywa walkowerem!');
 }
-if (computerMove == 'Nieznany ruch') && (playerMove = 'Papier') {
+if (computerMove == 'Nieznany ruch' && playerMove == 'Papier') {
   printMessage('Nieznany ruch gracza, komputer wygrywa walkowerem!');
 }
-if (computerMove == 'Nieznany ruch') && (playerMove = 'Nozyce') {
+if (computerMove == 'Nieznany ruch' && playerMove == 'Nozyce') {
   printMessage('Nieznany ruch gracza, komputer wygrywa walkowerem!');
 }
