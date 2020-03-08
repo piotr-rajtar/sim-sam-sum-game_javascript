@@ -1,36 +1,30 @@
-//COMPUTER MOVE
+// MOVES FUNCTION
 
-let computerMove = 'Nieznany ruch';
+function getMoveName(argMoveId) {
+  if (argMoveId == 1) {
+    return 'Kamien';
+  } else if (argMoveId == 2) {
+    return 'Papier';
+  } else if (argMoveId == 3) {
+    return 'Nozyce';
+  } else {
+    return 'Nieznany ruch';
+  }
+}
+
+//COMPUTER MOVE
 let computerChoice = Math.floor(Math.random() * 3 + 1);
+let computerMove = getMoveName(computerChoice);
 
 console.log('Komputer wybral: ' + computerChoice);
-
-if (computerChoice == 1) {
-  computerMove = 'Kamien';
-} else if (computerChoice == 2) {
-  computerMove = 'Papier';
-} else {
-  computerMove = 'Nozyce';
-}
 
 printMessage('Ruch komputera to: ' + computerMove);
 
 //PLAYER MOVE
-
-let playerMove = 'Nieznany ruch';
 let playerInput = prompt('Wybierz swoj ruch: 1.Kamien, 2.Papier, 3.Nozyce');
+let playerMove = getMoveName(playerInput);
 
 console.log('Gracz wybral: ' + playerInput);
-
-if (playerInput == 1) {
-  playerMove = 'Kamien';
-} else if (playerInput == 2) {
-  playerMove = 'Papier';
-} else if (playerInput == 3) {
-  playerMove ='Nozyce';
-} else {
-  playerMove = playerMove;
-}
 
 printMessage('Ruch gracza to: ' + playerMove);
 
