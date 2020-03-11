@@ -64,7 +64,7 @@ function playGame(playerInput) {
   }
 
   //DISPLAY RESULTS
-  printMessage('WYNIK: ' + displayResult(getMoveName(computerChoice),getMoveName(playerInput)));
+  printMessage('RESULTS: ' + displayResult(getMoveName(computerChoice),getMoveName(playerInput)));
 }
 
 //PLAYER INPUT DECLARATION

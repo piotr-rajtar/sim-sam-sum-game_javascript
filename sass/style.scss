@@ -19,9 +19,13 @@ button {
   font-size: 20px;
   border: 2px solid $border-color;
   border-radius: 10%;
+  transition: all 0.5s;
 }
 
-
+button:hover {
+  background-color: $border-color;
+  color: $text-color-light;
+}
 
 i {
   width: 60px;
