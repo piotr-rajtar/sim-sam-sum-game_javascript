@@ -74,21 +74,16 @@ h4 {
   }
 }
 
-/* BUTTONS */
 
-#buttons {
-  //margin-bottom: 40px;
+/* JS DIVS */
+
+#messages, #result {
+  padding: 15px;
+  margin: 10px;
+  font-size: 25px;
 }
 
-/* RESULTS */
-
-.results {
-
-}
-
-
-/* MESSAGES */
-
-#messages {
-  //margin-top: 20px;
+#result {
+    font-weight: bold;
+    font-size: 40px;
 }
