@@ -1,6 +1,10 @@
 $color-gray: #191970;
 $text-color: #FEFEFE;
 
+body {
+  box-sizing: border-box;
+}
+
 .container {
   background-color: $color-gray;
   color: $text-color;
