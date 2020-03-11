@@ -1,6 +1,19 @@
 body {
   box-sizing: border-box;
   text-align: center;
+  height: 100vh;
+  background-color: #191970;
+  color: #FEFEFE;
+}
+
+button {
+  width: 100px;
+  height: 50px;
+  background-color: white;
+  color: #000000;
+  font-size: 20px;
+  border: 2px solid #32943C;
+  border-radius: 10%;
 }
 
 i {
@@ -8,11 +21,6 @@ i {
   height: 60px;
   line-height: 60px;
   font-size: 60px;
-}
-
-.container {
-  background-color: #191970;
-  color: #FEFEFE;
 }
 
 .icons div {
@@ -23,5 +31,9 @@ i {
 
 .icons div h3 {
   margin-top: 10px;
+}
+
+#buttons {
+  margin-bottom: 20px;
 }
 /*# sourceMappingURL=style.css.map */

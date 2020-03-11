@@ -6,11 +6,11 @@ function playGame(playerInput) {
 
   function getMoveName(argMoveId) {
     if (argMoveId == 1) {
-      return 'Kamien';
+      return 'Stone';
     } else if (argMoveId == 2) {
-      return 'Papier';
+      return 'Paper';
     } else {
-      return 'Nozyce';
+      return 'Scissors';
     }
   }
 
@@ -18,47 +18,47 @@ function playGame(playerInput) {
   let computerChoice = Math.floor(Math.random() * 3 + 1);
   let computerMove = getMoveName(computerChoice);
 
-  console.log('Komputer wybral: ' + computerChoice);
+  console.log('Computer choose: ' + computerChoice);
 
   // RESULTS - FUNCTION
 
   function displayResult(argComputerMove, argPlayerMove){
-    printMessage('Ruch komputera to: ' + argComputerMove + ', ruch gracza to: ' + argPlayerMove);
+    printMessage('Computer choose: ' + argComputerMove + ', Player choose: ' + argPlayerMove);
 
     //DRAWS
-    if (argComputerMove == 'Kamien' && argPlayerMove == 'Kamien') {
-      return 'Mamy remis!';
+    if (argComputerMove == 'Stone' && argPlayerMove == 'Stone') {
+      return 'DRAW!';
     }
-    if (argComputerMove == 'Papier' && argPlayerMove == 'Papier') {
-      return 'Mamy remis!';
+    if (argComputerMove == 'Paper' && argPlayerMove == 'Paper') {
+      return 'DRAW!';
     }
-    if (argComputerMove == 'Nozyce' && argPlayerMove == 'Nozyce') {
-      return 'Mamy remis!';
+    if (argComputerMove == 'Scissors' && argPlayerMove == 'Scissors') {
+      return 'DRAW!';
     }
-    if (argComputerMove == 'Nieznany ruch' && argPlayerMove == 'Nieznany ruch') {
-      return 'Mamy remis!';
+    if (argComputerMove == 'Unknown move' && argPlayerMove == 'Unknown move') {
+      return 'DRAW!';
     }
 
     //COMPUTER WINS
-    if (argComputerMove == 'Kamien' && argPlayerMove == 'Nozyce') {
-      return 'Komputer wygrywa!';
+    if (argComputerMove == 'Stone' && argPlayerMove == 'Scissors') {
+      return 'Computer wins!';
     }
-    if (argComputerMove == 'Papier' && argPlayerMove == 'Kamien') {
-      return 'Komputer wygrywa!';
+    if (argComputerMove == 'Paper' && argPlayerMove == 'Stone') {
+      return 'Computer wins!';
     }
-    if (argComputerMove == 'Nozyce' && argPlayerMove == 'Papier') {
-      return 'Komputer wygrywa!';
+    if (argComputerMove == 'Scissors' && argPlayerMove == 'Paper') {
+      return 'Computer wins!';
     }
 
     //PLAYER WINS
-    if (argComputerMove == 'Kamien' && argPlayerMove == 'Papier') {
-      return 'Gracz wygrywa!';
+    if (argComputerMove == 'Stone' && argPlayerMove == 'Paper') {
+      return 'Player wins!';
     }
-    if (argComputerMove == 'Papier' && argPlayerMove == 'Nozyce') {
-      return 'Gracz wygrywa!';
+    if (argComputerMove == 'Paper' && argPlayerMove == 'Scissors') {
+      return 'Player wins!';
     }
-    if (argComputerMove == 'Nozyce' && argPlayerMove == 'Kamien') {
-      return 'Gracz wygrywa!';
+    if (argComputerMove == 'Scissors' && argPlayerMove == 'Stone') {
+      return 'Player wins!';
     }
 
     //UNKNOWN PLAYER MOVE
