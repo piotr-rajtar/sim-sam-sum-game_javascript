@@ -61,27 +61,6 @@ function playGame(playerInput) {
       return 'Player wins!';
     }
 
-    //UNKNOWN PLAYER MOVE
-    if (argComputerMove == 'Kamien' && argPlayerMove == 'Nieznany ruch') {
-      return 'Nieznany ruch gracza, komputer wygrywa walkowerem!';
-    }
-    if (argComputerMove == 'Papier' && argPlayerMove == 'Nieznany ruch') {
-      return 'Nieznany ruch gracza, komputer wygrywa walkowerem!';
-    }
-    if (argComputerMove == 'Nozyce' && argPlayerMove == 'Nieznany ruch') {
-      return 'Nieznany ruch gracza, komputer wygrywa walkowerem!';
-    }
-
-    //UNKNOWN COMPUTER MOVE
-    if (argComputerMove == 'Nieznany ruch' && argPlayerMove == 'Kamien') {
-      return 'Nieznany ruch komputera, gracz wygrywa walkowerem!';
-    }
-    if (argComputerMove == 'Nieznany ruch' && argPlayerMove == 'Papier') {
-      return 'Nieznany ruch komputera, gracz wygrywa walkowerem!';
-    }
-    if (argComputerMove == 'Nieznany ruch' && argPlayerMove == 'Nozyce') {
-      return 'Nieznany ruch komputera, gracz wygrywa walkowerem!';
-    }
   }
 
   //DISPLAY RESULTS
