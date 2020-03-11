@@ -3,9 +3,30 @@ $text-color: #FEFEFE;
 
 body {
   box-sizing: border-box;
+  text-align: center;
+}
+
+i {
+  width: 60px;
+  height: 60px;
+  line-height: 60px;
+  font-size: 60px;
 }
 
 .container {
   background-color: $color-gray;
   color: $text-color;
+}
+
+.icons {
+
+  div {
+    display: inline-block;
+    margin: 0 20px;
+    margin-bottom: 20px;
+
+    h3 {
+      margin-top: 10px;
+    }
+  }
 }
