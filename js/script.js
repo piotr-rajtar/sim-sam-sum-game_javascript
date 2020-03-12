@@ -13,6 +13,9 @@ document.getElementById('play-paper').addEventListener('click', function(){
 document.getElementById('play-scissors').addEventListener('click', function(){
   playGame(3);
 });
+document.getElementById('refresh').addEventListener('click', function(){
+  pageReload();
+});
 
 
 function playGame(playerInput) {
@@ -37,51 +40,51 @@ function playGame(playerInput) {
   let computerMove = getMoveName(computerChoice);
 
   // RESULTS - FUNCTION
-do {
-  function displayResult(argComputerMove, argPlayerMove){
-    printMessage('Computer choose: ' + argComputerMove + ', Player choose: ' + argPlayerMove);
+  do {
+    function displayResult(argComputerMove, argPlayerMove){
+      printMessage('Computer choose: ' + argComputerMove + ', Player choose: ' + argPlayerMove);
 
-    //DRAWS
-    if (argComputerMove == 'Stone' && argPlayerMove == 'Stone') {
-      return 'DRAW!';
-    }
-    if (argComputerMove == 'Paper' && argPlayerMove == 'Paper') {
-      return 'DRAW!';
-    }
-    if (argComputerMove == 'Scissors' && argPlayerMove == 'Scissors') {
-      return 'DRAW!';
-    }
+      //DRAWS
+      if (argComputerMove == 'Stone' && argPlayerMove == 'Stone') {
+        return 'DRAW!';
+      }
+      if (argComputerMove == 'Paper' && argPlayerMove == 'Paper') {
+        return 'DRAW!';
+      }
+      if (argComputerMove == 'Scissors' && argPlayerMove == 'Scissors') {
+        return 'DRAW!';
+      }
 
-    //COMPUTER WINS
-    if (argComputerMove == 'Stone' && argPlayerMove == 'Scissors') {
-      computerScore = computerScore + 1;
-      return 'Computer wins the round!';
-    }
-    if (argComputerMove == 'Paper' && argPlayerMove == 'Stone') {
-      computerScore = computerScore + 1;
-      return 'Computer wins the round!';
-    }
-    if (argComputerMove == 'Scissors' && argPlayerMove == 'Paper') {
-      computerScore = computerScore + 1;
-      return 'Computer wins the round!';
-    }
+      //COMPUTER WINS
+      if (argComputerMove == 'Stone' && argPlayerMove == 'Scissors') {
+        computerScore = computerScore + 1;
+        return 'Computer wins the round!';
+      }
+      if (argComputerMove == 'Paper' && argPlayerMove == 'Stone') {
+        computerScore = computerScore + 1;
+        return 'Computer wins the round!';
+      }
+      if (argComputerMove == 'Scissors' && argPlayerMove == 'Paper') {
+        computerScore = computerScore + 1;
+        return 'Computer wins the round!';
+      }
 
-    //PLAYER WINS
-    if (argComputerMove == 'Stone' && argPlayerMove == 'Paper') {
-      playerScore = playerScore + 1;
-      return 'Player wins the round!';
-    }
-    if (argComputerMove == 'Paper' && argPlayerMove == 'Scissors') {
-      playerScore = playerScore + 1;
-      return 'Player wins the round!';
-    }
-    if (argComputerMove == 'Scissors' && argPlayerMove == 'Stone') {
-      playerScore = playerScore + 1;
-      return 'Player wins the round!';
-    }
+      //PLAYER WINS
+      if (argComputerMove == 'Stone' && argPlayerMove == 'Paper') {
+        playerScore = playerScore + 1;
+        return 'Player wins the round!';
+      }
+      if (argComputerMove == 'Paper' && argPlayerMove == 'Scissors') {
+        playerScore = playerScore + 1;
+        return 'Player wins the round!';
+      }
+      if (argComputerMove == 'Scissors' && argPlayerMove == 'Stone') {
+        playerScore = playerScore + 1;
+        return 'Player wins the round!';
+      }
 
-  }
-} while (playerScore == 3 || computerScore == 3);
+    }
+  } while (playerScore == 3 || computerScore == 3);
 
   //DISPLAY RESULTS
   printMessage('RESULTS: ' + displayResult(getMoveName(computerChoice),getMoveName(playerInput)));
