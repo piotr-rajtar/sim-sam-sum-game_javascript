@@ -17,3 +17,7 @@ function clearMessages(){
 function clearScore(){
 	document.getElementById('result').innerHTML = '';
 }
+
+function pageReload(){
+	location.reload();
+}

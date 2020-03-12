@@ -14,6 +14,7 @@ document.getElementById('play-scissors').addEventListener('click', function(){
   playGame(3);
 });
 
+
 function playGame(playerInput) {
 
   clearMessages();
@@ -36,7 +37,7 @@ function playGame(playerInput) {
   let computerMove = getMoveName(computerChoice);
 
   // RESULTS - FUNCTION
-
+do {
   function displayResult(argComputerMove, argPlayerMove){
     printMessage('Computer choose: ' + argComputerMove + ', Player choose: ' + argPlayerMove);
 
@@ -80,9 +81,21 @@ function playGame(playerInput) {
     }
 
   }
+} while (playerScore == 3 || computerScore == 3);
 
   //DISPLAY RESULTS
   printMessage('RESULTS: ' + displayResult(getMoveName(computerChoice),getMoveName(playerInput)));
   printScore('PLAYER ' + playerScore + ' : ' + computerScore + ' COMPUTER');
+
+  if (playerScore == 3) {
+    clearMessages();
+    printMessage('FINAL RESULTS: PLAYER WINS');
+    printMessage('RELOAD TO TRY AGAIN');
+  }
+  if (computerScore == 3) {
+    clearMessages();
+    printMessage('FINAL RESULTS: COMPUTER WINS');
+    printMessage('RELOAD TO TRY AGAIN');
+  }
 
 }
