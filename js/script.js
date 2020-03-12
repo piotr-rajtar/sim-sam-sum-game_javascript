@@ -94,11 +94,17 @@ function playGame(playerInput) {
     clearMessages();
     printMessage('FINAL RESULTS: PLAYER WINS');
     printMessage('RELOAD TO TRY AGAIN');
+    document.getElementById('play-stone').disabled = true;
+    document.getElementById('play-paper').disabled = true;
+    document.getElementById('play-scissors').disabled = true;
   }
   if (computerScore == 3) {
     clearMessages();
     printMessage('FINAL RESULTS: COMPUTER WINS');
     printMessage('RELOAD TO TRY AGAIN');
+    document.getElementById('play-stone').disabled = true;
+    document.getElementById('play-paper').disabled = true;
+    document.getElementById('play-scissors').disabled = true;
   }
 
 }
