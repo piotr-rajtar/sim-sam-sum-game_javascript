@@ -62,4 +62,17 @@ h4 {
 .icons div h4 {
   margin-top: 10px;
 }
+
+/* JS DIVS */
+#messages, #result {
+  padding: 15px;
+  margin: 10px;
+  font-size: 25px;
+}
+
+#result {
+  font-weight: bold;
+  font-size: 40px;
+}
+
 /*# sourceMappingURL=style.css.map */

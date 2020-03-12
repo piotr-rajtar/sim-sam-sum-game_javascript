@@ -1,6 +1,23 @@
+//SCORE
+
+let playerScore = 0;
+let computerScore = 0;
+
+//PLAYER INPUT DECLARATION
+document.getElementById('play-stone').addEventListener('click', function(){
+  playGame(1);
+});
+document.getElementById('play-paper').addEventListener('click', function(){
+  playGame(2);
+});
+document.getElementById('play-scissors').addEventListener('click', function(){
+  playGame(3);
+});
+
 function playGame(playerInput) {
 
   clearMessages();
+  clearScore();
 
   // MOVES FUNCTION
 
@@ -18,8 +35,6 @@ function playGame(playerInput) {
   let computerChoice = Math.floor(Math.random() * 3 + 1);
   let computerMove = getMoveName(computerChoice);
 
-  console.log('Computer choose: ' + computerChoice);
-
   // RESULTS - FUNCTION
 
   function displayResult(argComputerMove, argPlayerMove){
@@ -35,45 +50,39 @@ function playGame(playerInput) {
     if (argComputerMove == 'Scissors' && argPlayerMove == 'Scissors') {
       return 'DRAW!';
     }
-    if (argComputerMove == 'Unknown move' && argPlayerMove == 'Unknown move') {
-      return 'DRAW!';
-    }
 
     //COMPUTER WINS
     if (argComputerMove == 'Stone' && argPlayerMove == 'Scissors') {
-      return 'Computer wins!';
+      computerScore = computerScore + 1;
+      return 'Computer wins the round!';
     }
     if (argComputerMove == 'Paper' && argPlayerMove == 'Stone') {
-      return 'Computer wins!';
+      computerScore = computerScore + 1;
+      return 'Computer wins the round!';
     }
     if (argComputerMove == 'Scissors' && argPlayerMove == 'Paper') {
-      return 'Computer wins!';
+      computerScore = computerScore + 1;
+      return 'Computer wins the round!';
     }
 
     //PLAYER WINS
     if (argComputerMove == 'Stone' && argPlayerMove == 'Paper') {
-      return 'Player wins!';
+      playerScore = playerScore + 1;
+      return 'Player wins the round!';
     }
     if (argComputerMove == 'Paper' && argPlayerMove == 'Scissors') {
-      return 'Player wins!';
+      playerScore = playerScore + 1;
+      return 'Player wins the round!';
     }
     if (argComputerMove == 'Scissors' && argPlayerMove == 'Stone') {
-      return 'Player wins!';
+      playerScore = playerScore + 1;
+      return 'Player wins the round!';
     }
 
   }
 
   //DISPLAY RESULTS
   printMessage('RESULTS: ' + displayResult(getMoveName(computerChoice),getMoveName(playerInput)));
-}
+  printScore('PLAYER ' + playerScore + ' : ' + computerScore + ' COMPUTER');
 
-//PLAYER INPUT DECLARATION
-document.getElementById('play-stone').addEventListener('click', function(){
-  playGame(1);
-});
-document.getElementById('play-paper').addEventListener('click', function(){
-  playGame(2);
-});
-document.getElementById('play-scissors').addEventListener('click', function(){
-  playGame(3);
-});
+}

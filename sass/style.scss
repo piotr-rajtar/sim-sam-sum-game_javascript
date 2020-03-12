@@ -73,3 +73,16 @@ h4 {
     }
   }
 }
+
+/* JS DIVS */
+
+#messages, #result {
+  padding: 15px;
+  margin: 10px;
+  font-size: 25px;
+}
+
+#result {
+    font-weight: bold;
+    font-size: 40px;
+}
